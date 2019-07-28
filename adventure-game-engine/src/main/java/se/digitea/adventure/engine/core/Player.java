@@ -18,6 +18,11 @@ public class Player implements Entity {
     }
 
     @Override
+    public Faction getFaction() {
+        return new Faction("Player", false);
+    }
+
+    @Override
     public Trait[] getTraits() {
         return new Trait[]{
                 Trait.DAMAGEABLE
