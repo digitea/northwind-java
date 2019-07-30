@@ -1,40 +1,32 @@
 package se.digitea.adventure.engine.core;
 
 import se.digitea.adventure.engine.entities.Entity;
-import se.digitea.adventure.engine.entities.Stats;
 import se.digitea.adventure.engine.items.Item;
+import se.digitea.adventure.engine.templating.DeathCause;
+import se.digitea.adventure.engine.templating.DeathText;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class Player implements Entity {
-    private Stats stats = new Stats(10, 1);
+@DeathText(cause = DeathCause.ANY, value = {
+        "And so ends the life of ${player.name}.",
+        "The light fades away for ${player.name}. Death has come.",
+        "The warmth of life leaves the body of ${player.name}.",
+        "Hope fades away as ${player.name} dies."
+})
+@DeathText(cause = DeathCause.POISON, value = {
+        "The lingering bite of poison would never leave ${player.name}. Death is painful.",
+        "The numbness goes away as ${player.name} fades out of existence."
+})
+public class Player extends Entity {
     private final List<Item> items = new ArrayList<>();
     private Point position;
-    private EntityName name;
 
     public Player(String name, Point position) {
-        this.name = new EntityName(name);
+        super(new EntityName(name), "The player.", new Stats(10, 2), new LootTable(Collections.emptyList()));
         this.position = position;
-    }
-
-    @Override
-    public Stats getStats() {
-        return stats;
-    }
-
-    @Override
-    public Faction getFaction() {
-        return new Faction("Player", false);
-    }
-
-    public String getName() {
-        return name.toString();
-    }
-
-    public String getDescription() {
-        return "This is you.";
     }
 
     public Point getPosition() {

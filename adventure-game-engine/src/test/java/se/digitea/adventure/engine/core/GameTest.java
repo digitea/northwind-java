@@ -1,12 +1,7 @@
 package se.digitea.adventure.engine.core;
 
 import org.junit.jupiter.api.Test;
-import se.digitea.adventure.engine.entities.Animal;
 import se.digitea.adventure.engine.entities.Entity;
-import se.digitea.adventure.engine.entities.Stats;
-import se.digitea.adventure.engine.world.World;
-
-import java.awt.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

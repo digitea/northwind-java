@@ -1,5 +1,6 @@
 package se.digitea.adventure.engine.story;
 
+import org.apache.commons.text.StringSubstitutor;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
@@ -24,10 +25,19 @@ public class StoryTextDatabase {
         Path path = Paths.get(resourceDirectory.toURI());
         PathMatcher matcher = FileSystems.getDefault().getPathMatcher("**\\*.yml");
         Files.find(path, 3, (file, basicFileAttributes) -> matcher.matches(file))
-            .forEach(file -> {
-                String key = "";
-                String value = "";
-                database.put(key, value);
-            });
+                .forEach(file -> {
+                    String key = "";
+                    String value = "";
+                    database.put(key, value);
+                });
+    }
+
+    public String get(String key) {
+        Map<String, String> valuesMap = new HashMap<String, String>();
+        valuesMap.put("animal", "quick brown fox");
+        valuesMap.put("target", "lazy dog");
+        String templateString = "The ${animal} jumped over the ${target}.";
+        StringSubstitutor substitutor = new StringSubstitutor(valuesMap);
+        return substitutor.replace(templateString);
     }
 }
