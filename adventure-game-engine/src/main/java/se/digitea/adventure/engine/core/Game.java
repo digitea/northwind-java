@@ -1,7 +1,10 @@
 package se.digitea.adventure.engine.core;
 
 import org.slf4j.LoggerFactory;
+import se.digitea.adventure.engine.entities.Entity;
 import se.digitea.adventure.engine.exceptions.IllegalPositionException;
+import se.digitea.adventure.engine.items.Weapon;
+import se.digitea.adventure.engine.world.World;
 
 import java.awt.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -43,5 +46,14 @@ public class Game {
             LoggerFactory.getLogger(Game.class).warn("Attempted to move to an illegal position.", e);
             return false;
         }
+    }
+
+    public World getWorld() {
+        return world;
+    }
+
+    public void attack(Entity target, Weapon weapon) {
+        final int damage = weapon != null ? weapon.getDamage(player, target) : (int) Math.floor(player.getStats().getStrength() / 2.0);
+        target.getStats().setHealth(target.getStats().getHealth() - damage);
     }
 }

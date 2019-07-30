@@ -1,0 +1,8 @@
+generic:
+  - And so ends the life of :player.
+  - The light fades away for :player. Death has come.
+  - The warmth of life leaves the body of :player.
+  - Hope fades away as :player dies.
+poison:
+  - The lingering bite of poison would never leave :player. Death is painful.
+  - The numbness goes away as :player fades out of existence.
