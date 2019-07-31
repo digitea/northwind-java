@@ -1,4 +1,4 @@
-package se.digitea.adventure.engine.entities;
+package se.digitea.adventure.engine.annotations;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

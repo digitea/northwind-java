@@ -1,4 +1,6 @@
-package se.digitea.adventure.engine.templating;
+package se.digitea.adventure.engine.annotations;
+
+import se.digitea.adventure.engine.templating.DeathCause;
 
 import java.lang.annotation.Repeatable;
 import java.lang.annotation.Retention;

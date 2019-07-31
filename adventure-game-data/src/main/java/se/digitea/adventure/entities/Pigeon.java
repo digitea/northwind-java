@@ -1,5 +1,9 @@
 package se.digitea.adventure.entities;
 
+import se.digitea.adventure.engine.annotations.Description;
+import se.digitea.adventure.engine.annotations.Name;
+import se.digitea.adventure.engine.annotations.Standing;
+import se.digitea.adventure.engine.annotations.Stats;
 import se.digitea.adventure.engine.entities.*;
 
 @Name("Pigeon")
@@ -10,5 +14,5 @@ import se.digitea.adventure.engine.entities.*;
 // TODO @Loot(item = Feathers.class, probability = 0.60)
 // TODO @Loot(item = Feathers.class, probability = 0.40)
 // TODO @Loot(item = Feathers.class, probability = 0.20)
-public class Pigeon {
+public class Pigeon extends Entity {
 }

@@ -1,5 +1,6 @@
-package se.digitea.adventure.engine.core;
+package se.digitea.adventure.engine.contracts;
 
+import se.digitea.adventure.engine.core.LootTable;
 import se.digitea.adventure.engine.items.Item;
 
 import java.util.List;

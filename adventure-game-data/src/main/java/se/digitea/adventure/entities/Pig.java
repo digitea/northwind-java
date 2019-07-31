@@ -1,5 +1,9 @@
 package se.digitea.adventure.entities;
 
+import se.digitea.adventure.engine.annotations.Description;
+import se.digitea.adventure.engine.annotations.Name;
+import se.digitea.adventure.engine.annotations.Standing;
+import se.digitea.adventure.engine.annotations.Stats;
 import se.digitea.adventure.engine.entities.*;
 
 @Name("Pig")

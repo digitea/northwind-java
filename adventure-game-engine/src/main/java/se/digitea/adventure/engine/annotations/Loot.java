@@ -1,4 +1,4 @@
-package se.digitea.adventure.engine.entities;
+package se.digitea.adventure.engine.annotations;
 
 import se.digitea.adventure.engine.items.Item;
 
