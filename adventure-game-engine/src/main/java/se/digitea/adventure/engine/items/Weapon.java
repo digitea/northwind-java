@@ -5,6 +5,4 @@ import se.digitea.adventure.engine.entities.Entity;
 
 public abstract class Weapon extends Item implements Equipable {
     public abstract int getDamage(Entity attacker, Entity target);
-
-    public abstract int getRange();
 }

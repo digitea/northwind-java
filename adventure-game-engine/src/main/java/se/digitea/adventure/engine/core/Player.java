@@ -2,7 +2,6 @@ package se.digitea.adventure.engine.core;
 
 import se.digitea.adventure.engine.entities.Entity;
 import se.digitea.adventure.engine.items.Item;
-import se.digitea.adventure.engine.templating.DeathCause;
 import se.digitea.adventure.engine.templating.DeathText;
 
 import java.awt.*;

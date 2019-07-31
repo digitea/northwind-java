@@ -1,4 +1,4 @@
-package se.digitea.adventure.engine.templating;
+package se.digitea.adventure.engine.core;
 
 public enum DeathCause {
     ANY,
