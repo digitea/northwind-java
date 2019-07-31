@@ -1,7 +1,6 @@
 package se.digitea.adventure.engine.world;
 
 import se.digitea.adventure.engine.entities.Entity;
-import se.digitea.adventure.engine.world.Tile;
 
 import java.util.ArrayList;
 import java.util.Collections;

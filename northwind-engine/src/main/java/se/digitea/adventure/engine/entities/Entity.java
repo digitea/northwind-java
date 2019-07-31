@@ -3,9 +3,9 @@ package se.digitea.adventure.engine.entities;
 import se.digitea.adventure.engine.annotations.Description;
 import se.digitea.adventure.engine.annotations.Name;
 import se.digitea.adventure.engine.annotations.Stats;
+import se.digitea.adventure.engine.contracts.Lootable;
 import se.digitea.adventure.engine.core.EntityName;
 import se.digitea.adventure.engine.core.LootTable;
-import se.digitea.adventure.engine.contracts.Lootable;
 
 import java.util.Collections;
 import java.util.concurrent.ThreadLocalRandom;

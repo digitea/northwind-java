@@ -3,21 +3,18 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>adventure-game</artifactId>
-        <groupId>se.digitea.adventure</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <artifactId>northwind-parent</artifactId>
+        <groupId>se.digitea.northwind</groupId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>adventure-game-data</artifactId>
+    <artifactId>northwind-data</artifactId>
     <dependencies>
         <dependency>
-            <groupId>se.digitea.adventure</groupId>
-            <artifactId>adventure-game-engine</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>se.digitea.northwind</groupId>
+            <artifactId>northwind-engine</artifactId>
         </dependency>
     </dependencies>
-
 
 </project>
