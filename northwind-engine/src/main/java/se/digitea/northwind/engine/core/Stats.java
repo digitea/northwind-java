@@ -42,4 +42,12 @@ public class Stats {
     public void addHealth(int health) {
         this.health = Math.min(this.health + health, maxHealth);
     }
+
+    public void addStrength(int strength) {
+        this.strength = this.strength + strength;
+    }
+
+    public void removeStrength(int strength) {
+        this.strength = Math.max(this.strength - strength, 0);
+    }
 }

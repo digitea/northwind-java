@@ -16,17 +16,19 @@ public class EmptyTile implements Tile {
         this.description = description;
     }
 
+    public void addEntity(Entity entity) {
+        entities.add(entity);
+    }
+
     @Override
     public List<Entity> getEntities() {
         return Collections.unmodifiableList(entities);
     }
 
-    @Override
     public String getName() {
         return name;
     }
 
-    @Override
     public String getDescription() {
         return description;
     }

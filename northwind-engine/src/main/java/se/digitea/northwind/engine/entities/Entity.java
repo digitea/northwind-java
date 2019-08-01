@@ -7,13 +7,16 @@ import se.digitea.northwind.engine.contracts.Lootable;
 import se.digitea.northwind.engine.core.EntityName;
 import se.digitea.northwind.engine.core.LootTable;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class Entity implements Lootable {
-    private final EntityName name;
+    protected EntityName name;
     private final String description;
     private final se.digitea.northwind.engine.core.Stats stats;
+    private final List<EntityEffect> effects = new ArrayList<>();
     private final LootTable lootTable;
 
     public Entity() {
@@ -42,5 +45,9 @@ public abstract class Entity implements Lootable {
     @Override
     public LootTable getLootTable() {
         return lootTable;
+    }
+
+    public void addEffect(EntityEffect effect) {
+        effects.add(effect);
     }
 }

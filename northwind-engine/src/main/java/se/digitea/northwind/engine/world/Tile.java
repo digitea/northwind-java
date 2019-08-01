@@ -4,6 +4,8 @@ import se.digitea.northwind.engine.entities.Entity;
 
 import java.util.List;
 
-public interface Tile extends Nameable {
+public interface Tile {
     public List<Entity> getEntities();
+
+    public String getName();
 }

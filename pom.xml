@@ -11,6 +11,7 @@
     <modules>
         <module>northwind-engine</module>
         <module>northwind-data</module>
+        <module>northwind-game</module>
     </modules>
 
     <dependencyManagement>
