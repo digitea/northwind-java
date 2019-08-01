@@ -48,6 +48,10 @@ public class Game {
         }
     }
 
+    public Player getPlayer() {
+        return player;
+    }
+
     public World getWorld() {
         return world;
     }

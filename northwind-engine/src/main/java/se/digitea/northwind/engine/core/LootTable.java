@@ -11,7 +11,6 @@ public class LootTable {
 
     public LootTable(List<LootTableItem> items) {
         this.items = List.copyOf(items);
-        this.items.sort((a, b) -> a.compareTo(b));
     }
 
     public List<Item> rollForLoot() {
@@ -23,7 +22,6 @@ public class LootTable {
 
             if (roll < item.getChance()) {
                 loot.add(item.getItem());
-                items.remove(item); // Prevent double looting.
             }
         }
 

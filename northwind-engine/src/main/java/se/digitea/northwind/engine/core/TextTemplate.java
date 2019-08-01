@@ -22,6 +22,10 @@ public class TextTemplate {
         return new TextTemplate(template, Collections.emptyMap());
     }
 
+    public static TextTemplate of(String... templateLines) {
+        return of(String.join(System.lineSeparator(), templateLines));
+    }
+
     public TextTemplate withValues(Map<String, String> values) {
         return of(template, values);
     }

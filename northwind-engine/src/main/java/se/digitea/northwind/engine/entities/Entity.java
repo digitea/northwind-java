@@ -20,13 +20,22 @@ public abstract class Entity implements Lootable {
     private final LootTable lootTable;
 
     public Entity() {
-        this.name = new EntityName(getClass().getAnnotation(Name.class).value());
+        Name nameAnnotation = getClass().getAnnotation(Name.class);
+        this.name = new EntityName(nameAnnotation != null ? nameAnnotation.value() : "?");
 
         Description[] descriptionAnnotations = getClass().getAnnotationsByType(Description.class);
-        this.description = descriptionAnnotations[ThreadLocalRandom.current().nextInt(descriptionAnnotations.length)].value();
+        if (descriptionAnnotations.length > 0) {
+            this.description = descriptionAnnotations[ThreadLocalRandom.current().nextInt(descriptionAnnotations.length)].value();
+        } else {
+            this.description = "...";
+        }
 
         Stats statsAnnotation = getClass().getAnnotation(Stats.class);
-        this.stats = new se.digitea.northwind.engine.core.Stats(statsAnnotation.health(), statsAnnotation.health());
+        if (statsAnnotation != null) {
+            this.stats = new se.digitea.northwind.engine.core.Stats(statsAnnotation.health(), statsAnnotation.health());
+        } else {
+            this.stats = null;
+        }
         this.lootTable = new LootTable(Collections.emptyList());
     }
 
