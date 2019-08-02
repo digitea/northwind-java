@@ -10,6 +10,7 @@ import se.digitea.northwind.engine.core.LootTable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class Entity implements Lootable {
@@ -32,7 +33,7 @@ public abstract class Entity implements Lootable {
 
         Stats statsAnnotation = getClass().getAnnotation(Stats.class);
         if (statsAnnotation != null) {
-            this.stats = new se.digitea.northwind.engine.core.Stats(statsAnnotation.health(), statsAnnotation.health());
+            this.stats = new se.digitea.northwind.engine.core.Stats(statsAnnotation.health(), statsAnnotation.strength());
         } else {
             this.stats = null;
         }
@@ -59,4 +60,6 @@ public abstract class Entity implements Lootable {
     public void addEffect(EntityEffect effect) {
         effects.add(effect);
     }
+
+    public abstract Map<String, String> getTextTemplateValues();
 }

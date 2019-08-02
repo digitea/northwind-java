@@ -7,7 +7,7 @@ public class Stats {
 
     public Stats(int health, int strength) {
         this.health = health;
-        this.maxHealth = maxHealth;
+        this.maxHealth = health;
         this.strength = strength;
     }
 
