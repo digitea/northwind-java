@@ -15,10 +15,6 @@
             <groupId>se.digitea.northwind</groupId>
             <artifactId>northwind-engine</artifactId>
         </dependency>
-        <dependency>
-            <groupId>se.digitea.northwind</groupId>
-            <artifactId>northwind-engine</artifactId>
-        </dependency>
     </dependencies>
 
 </project>
